@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage{graphicx} % new way of doing eps files
+\usepackage{listings} % nice code layout
+\usepackage[usenames]{color} % color
+\usepackage{float}
+\usepackage{gensymb}
+
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{graphgray}{gray}{0.7}
+\definecolor{ans}{rgb}{1,0,0}
+\definecolor{blue}{rgb}{0,0,1}
+% \Verilog{title}{label}{file}
+\newcommand{\Verilog}[3]{
+  \lstset{language=Verilog}
+  \lstset{backgroundcolor=\color{listinggray},rulecolor=\color{blue}}
+  \lstset{linewidth=\textwidth}
+  \lstset{commentstyle=\textit, stringstyle=\upshape,showspaces=false}
+  \lstset{frame=tb}
+  \lstinputlisting[caption={#1},label={#2}]{#3}
+}
+
+
+\author{Blake Fuller\\
+Armani Batista}
+\title{Lab2 - Multifunction Barrel Shifter}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+The purpose of this lab was to demonstrate a multifunction barrel shifter. We start with an 8-bit right shifter, then left shifter, with a test bench, and synthesized on the Spartan-3 FPGA. Then, the circuit is tested with 16 and 32-bits.
+
+\section{Interface}
+The barrel shifter stage has 2 input buses and one output bus. The user interacts with the shifter by enabling the desired switches which lights up the corresponding LED. This puts in a value which is then sent to the shifter. Additionally, the buttons are used to select how much to shift by.
+
+
+\section{Implementation}
+
+
+\section{Test Bench Design}
+
+
+\section{Simulation}
+
+\section{FPGA Realization and Final Verification}
+The implementation of the barrel shifter worked as expected.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.125,left]{no_shift.jpg}
+\caption{{No Shift Example}}
+\label{No Shift Example}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.125,left]{1_shift.jpg}
+\caption{{One Shift Example}}
+\label{One Shift Example}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.125,left]{2_shift.jpg}
+\caption{{Two Shift Example}}
+\label{Two Shift Example}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.125,left]{3_shift.jpg}
+\caption{{Three Shift Example}}
+\label{Three Shift Example}
+\end{center}
+\end{figure}
+
+\section{Conclusions}
+In this lab, the circuits for a barrel shifter were demonstrated.
+
+\end{document} 
