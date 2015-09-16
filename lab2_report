@@ -33,9 +33,8 @@ The purpose of this lab was to demonstrate a multifunction barrel shifter. We st
 \section{Interface}
 The barrel shifter stage has 2 input buses and one output bus. The user interacts with the shifter by enabling the desired switches which lights up the corresponding LED. This puts in a value which is then sent to the shifter. Additionally, the buttons are used to select how much to shift by.
 
-
 \section{Implementation}
-
+The aforementioned section states there are 2 input buses for the barrel shifter. The first is the bus width data input, in the first test case it's 8 bits controlled by the switches, and displayed by the LEDs. Then later, 16 and 32. The second input is the amount to shift by, in our case, this is controlled by the buttons. The output is the bus containing the shifted bits, which is displayed by the LEDs. Additionally, there are parameters which set the number of address bits and the width of the bus. A conditional statement checks the amount to shift by, then performs the corresponding shift depending on the stage, a 1, 2, or 4 bit shift can occur. 
 
 \section{Test Bench Design}
 
@@ -43,7 +42,7 @@ The barrel shifter stage has 2 input buses and one output bus. The user interact
 \section{Simulation}
 
 \section{FPGA Realization and Final Verification}
-The implementation of the barrel shifter worked as expected.
+The implementation of the barrel shifter worked as expected. In the below figures, we start with just an input and no shift. Next, the first button is depressed, which corresponds to a 1 bit shift. The next button shifts by two bits, and the last by four.
 
 \begin{figure}[H]
 \begin{center}
@@ -56,28 +55,28 @@ The implementation of the barrel shifter worked as expected.
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.125,left]{1_shift.jpg}
-\caption{{One Shift Example}}
-\label{One Shift Example}
+\caption{{1-bit Shift Example}}
+\label{1-bit Shift Example}
 \end{center}
 \end{figure}
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.125,left]{2_shift.jpg}
-\caption{{Two Shift Example}}
-\label{Two Shift Example}
+\caption{{2-bit Shift Example}}
+\label{2-bit Shift Example}
 \end{center}
 \end{figure}
 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[scale=0.125,left]{3_shift.jpg}
-\caption{{Three Shift Example}}
-\label{Three Shift Example}
+\caption{{4-bit Shift Example}}
+\label{4-bit Shift Example}
 \end{center}
 \end{figure}
 
 \section{Conclusions}
-In this lab, the circuits for a barrel shifter were demonstrated.
+In this lab, the circuit for a barrel shifter was demonstrated. We simulated an 8, 16, and 32 bit barrel shifter, and synthesized the 8-bit shifter on the FPGA. The inputs were the switches and the buttons shifted by 1,2, and 4 bits with the LEDs displaying the results.
 
 \end{document} 
