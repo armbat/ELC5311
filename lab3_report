@@ -1,4 +1,3 @@
-
 \documentclass{article}
 \usepackage{graphicx} % new way of doing eps files
 \usepackage{listings} % nice code layout
@@ -29,10 +28,10 @@ Armani Batista}
 \maketitle
 
 \section{Introduction}
-The purpose of this lab was to demonstrate a stack utilizing a FIFO buffer which was modified into a LIFO. We start with the ...
+The purpose of this lab was to demonstrate a stack utilizing a FIFO buffer which was modified into a LIFO.
 
 \section{Interface}
-The stack has <inputs> <outputs> .... The user interacts with the stack by ...
+The stack has <inputs> <outputs> .... The user interacts with the stack by flipping the switches 0 through 2.
 
 \section{Implementation}
 The aforementioned section states there are <inputs> <outputs> ...
@@ -43,7 +42,7 @@ The aforementioned section states there are <inputs> <outputs> ...
 \section{Simulation}
 
 \section{FPGA Realization and Final Verification}
-The implementation of the stack worked as expected. In the below figures, ...
+The implementation of the stack worked as expected. In the below figures we show the implementation running on the FPGA. We start with an empty stack, indicated by LED 6. Next we push a 1, 2, and 3 onto the stack. Then we read out 3, 2, and 1 moving back down the stack.
 
 \begin{figure}[H]
 \begin{center}
