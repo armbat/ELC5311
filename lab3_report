@@ -1,1 +1,59 @@
 
+\documentclass{article}
+\usepackage{graphicx} % new way of doing eps files
+\usepackage{listings} % nice code layout
+\usepackage[usenames]{color} % color
+\usepackage{float}
+\usepackage{gensymb}
+
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{graphgray}{gray}{0.7}
+\definecolor{ans}{rgb}{1,0,0}
+\definecolor{blue}{rgb}{0,0,1}
+% \Verilog{title}{label}{file}
+\newcommand{\Verilog}[3]{
+  \lstset{language=Verilog}
+  \lstset{backgroundcolor=\color{listinggray},rulecolor=\color{blue}}
+  \lstset{linewidth=\textwidth}
+  \lstset{commentstyle=\textit, stringstyle=\upshape,showspaces=false}
+  \lstset{frame=tb}
+  \lstinputlisting[caption={#1},label={#2}]{#3}
+}
+
+
+\author{Blake Fuller\\
+Armani Batista}
+\title{Lab3 - Stack}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+The purpose of this lab was to demonstrate a stack utilizing a FIFO buffer which was modified into a LIFO. We start with the ...
+
+\section{Interface}
+The stack has <inputs> <outputs> .... The user interacts with the stack by ...
+
+\section{Implementation}
+The aforementioned section states there are <inputs> <outputs> ...
+
+\section{Test Bench Design}
+
+
+\section{Simulation}
+
+\section{FPGA Realization and Final Verification}
+The implementation of the stack worked as expected. In the below figures, ...
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.125,left]{image.jpg}
+\caption{{Caption goes here}}
+\label{Label goes here}
+\end{center}
+\end{figure}
+
+
+\section{Conclusions}
+In this lab, the circuit for a stack was demonstrated. We simulated 
+\end{document} 
