@@ -34,29 +34,83 @@ The purpose of this lab was to demonstrate a stack utilizing a FIFO buffer which
 The stack has inputs for: clock, reset, read enable, write enable, and write data. The outputs are for the a full or empty register file, and to read the date. The user interacts with the stack by flipping the switches 0 through 2, to select the data to be inputted. When the stack is empty, LED 6 is lit indicating such. Next, the user presses the write button to push the value onto the stack. Here, the user can either read pushed data, or continue to write data to the stack. When the stack is full LED 7 will light, and no more data can be pushed. The user can proceed to read data though, and if so read until the stack is empty again.
 
 \section{Implementation}
-The aforementioned intro stated that the stack uses a converted FIFO buffer into a LIFO [].
+The aforementioned intro stated that the stack uses a converted FIFO buffer from listing 4.20 into a LIFO buffer [1]. The top module instantiates the LIFO, and two debounce modules also from listing 4.21 for the buttons [1].
 
 \section{Test Bench Design}
-
+The test bench uses the same inputs and outputs as the synthesized version, except we run through simulating the switch pattern and button presses for simulating reads and writes. The waveform is provided below.
 
 \section{Simulation}
 
-\section{FPGA Realization and Final Verification}
-The implementation of the stack worked as expected. In the below figures we show the implementation running on the FPGA. We start with an empty stack, indicated by LED 6. Next we push a 1, 2, and 3 onto the stack. Then we read out 3, 2, and 1 moving back down the stack.
-
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.125,left]{image.jpg}
-\caption{{Caption goes here}}
-\label{Label goes here}
+\includegraphics[scale=0.5,left]{wave.png}
+\caption{{Simulation}}
+\label{Simulation}
 \end{center}
 \end{figure}
 
+\section{FPGA Realization and Final Verification}
+The implementation of the stack worked as expected. In the below figures we show the implementation running on the FPGA. We start with an empty stack, indicated by LED 6. Next we push a 1, 2, and 4 onto the stack. Then we read out 4, 2, and 1 moving back down the stack.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.125,left]{IMG_3839.jpg}
+\caption{{Stack Empty}}
+\label{Stack Empty}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.125,left]{IMG_3840.jpg}
+\caption{{Push values on stack, stack no longer empty, but not yet full}}
+\label{Push values on stack, stack no longer empty, but not yet full}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.125,left]{IMG_3842.jpg}
+\caption{{Stack is full}}
+\label{Stack is full}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.125,left]{IMG_3844.jpg}
+\caption{{Read top of stack, also no longer full}}
+\label{Read top of stack, also no longer full}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.125,left]{IMG_3845.jpg}
+\caption{{Read next value down}}
+\label{Read next value down}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.125,left]{IMG_3847.jpg}
+\caption{{Read next value down}}
+\label{Read next value down}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[scale=0.125,left]{IMG_3848.jpg}
+\caption{{Stack is now empty again}}
+\label{Stack is now empty again}
+\end{center}
+\end{figure}
 
 \section{Conclusions}
-In this lab, the circuit for a stack was demonstrated. We simulated 
-\end{document}
+In this lab, the circuit for a stack was demonstrated. Derived from a FIFO buffer, it is a LIFO buffer where the user can input a switched input number, which are pushed onto the stack, then in the opposite order read out from the stack.
 
 \section{Reference}
-1. P. Chu. ...
+1. P. Chu., FPGA Prototyping by Verilog Examples: Xilinx Spartan-3 Version, Wiley, June 2008.
 \end{document} 
