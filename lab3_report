@@ -31,10 +31,10 @@ Armani Batista}
 The purpose of this lab was to demonstrate a stack utilizing a FIFO buffer which was modified into a LIFO.
 
 \section{Interface}
-The stack has <inputs> <outputs> .... The user interacts with the stack by flipping the switches 0 through 2.
+The stack has inputs for: clock, reset, read enable, write enable, and write data. The outputs are for the a full or empty register file, and to read the date. The user interacts with the stack by flipping the switches 0 through 2, to select the data to be inputted. When the stack is empty, LED 6 is lit indicating such. Next, the user presses the write button to push the value onto the stack. Here, the user can either read pushed data, or continue to write data to the stack. When the stack is full LED 7 will light, and no more data can be pushed. The user can proceed to read data though, and if so read until the stack is empty again.
 
 \section{Implementation}
-The aforementioned section states there are <inputs> <outputs> ...
+The aforementioned intro stated that the stack uses a converted FIFO buffer into a LIFO [].
 
 \section{Test Bench Design}
 
@@ -55,4 +55,8 @@ The implementation of the stack worked as expected. In the below figures we show
 
 \section{Conclusions}
 In this lab, the circuit for a stack was demonstrated. We simulated 
+\end{document}
+
+\section{Reference}
+1. P. Chu. ...
 \end{document} 
